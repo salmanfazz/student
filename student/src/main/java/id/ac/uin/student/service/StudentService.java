@@ -15,4 +15,5 @@ public interface StudentService {
     Student save(Student std);
 
     void deleteById(Long id);
+
 }

@@ -24,11 +24,13 @@ public class StudentController {
 
     @Autowired
     public StudentController(StudentService studentservice) {
+
         this.studentservice = studentservice;
     }
 
     @GetMapping
-    public List<Student> getAllStudents() {
+    public List<Student> getAllStudents()
+    {
         return studentservice.getAllStudents();
     }
 

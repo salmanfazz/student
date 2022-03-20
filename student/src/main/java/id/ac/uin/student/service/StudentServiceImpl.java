@@ -14,31 +14,37 @@ public class StudentServiceImpl implements StudentService {
 
     @Autowired
     public StudentServiceImpl(StudentRepository studentRepository) {
+
         this.studentRepository = studentRepository;
     }
 
     @Override
     public List<Student> getAllStudents() {
+
         return studentRepository.findAll();
     }
 
     @Override
     public Optional<Student> findById(Long id) {
+
         return studentRepository.findById(id);
     }
 
     @Override
     public Optional<Student> findByEmail(String email) {
+
         return studentRepository.findByEmail(email);
     }
 
     @Override
     public Student save(Student std) {
+
         return studentRepository.save(std);
     }
 
     @Override
     public void deleteById(Long id) {
+
         studentRepository.deleteById(id);
     }
 }
